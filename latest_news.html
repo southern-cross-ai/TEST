@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest News</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #fff;
+      color: #111;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .view-all {
+      font-size: 14px;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .view-all:hover {
+      text-decoration: underline;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 32px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .news-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .news-meta {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 1000px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <h2>Latest news</h2>
+    <a href="all-news.html" class="view-all">View all</a>
+  </div>
+
+  <div class="news-grid">
+    <!-- News item 1 -->
+    <a href="news1.html" class="new1s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/1147124/pexels-photo-1147124.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" class="news-image" alt="News 1">
+            <div class="news-content">
+              <div class="news-title">Southern CrossAI Unveils First Multimodal AI Platform</div>
+              <div class="news-meta">Company · Mar 4, 2025 · 6 min read</div>
+            </div>
+          </div>
+    </a>
+
+    <!-- News item 2 -->
+    <a href="news2.html" class="new2s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/825949/pexels-photo-825949.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" class="news-image" alt="News 2">
+            <div class="news-content">
+              <div class="news-title">Southern CrossAI Partners with Guardian Group for Strategic AI Collaboration</div>
+              <div class="news-meta">Company · Feb 14, 2025 · 2 min read</div>
+            </div>
+          </div>
+    </a>
+
+    <!-- News item 3 -->
+    <a href="news3.html" class="new3s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/14232933/pexels-photo-14232933.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" class="news-image" alt="News 3">
+            <div class="news-content">
+              <div class="news-title">The Intelligence Era Begins: Southern CrossAI Launches Next-Gen Language Model</div>
+              <div class="news-meta">Global Affairs · Feb 9, 2025 · 5 min read</div>
+            </div>
+          </div>
+    </a>
+
+    <!-- News item 4 -->
+    <a href="news4.html" class="new4s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/4589278/pexels-photo-4589278.jpeg?auto=compress&cs=tinysrgb&h=400&w=400" class="news-image" alt="News 4">
+            <div class="news-content">
+              <div class="news-title">Southern CrossAI Introduces Data Residency Support in Australia</div>
+              <div class="news-meta">Product · Feb 5, 2025 · 3 min read</div>
+            </div>
+          </div>
+    </a>
+
+    <!-- News item 5 -->
+    <a href="news5.html" class="new5s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/31299008/pexels-photo-31299008.jpeg?auto=compress&cs=tinysrgb&h=400&w=400  " class="news-image" alt="News 5">
+            <div class="news-content">
+              <div class="news-title">Southern CrossAI and Universities Bring AI to Over 500,000 Students</div>
+              <div class="news-meta">Company · Feb 4, 2025 · 3 min read</div>
+            </div>
+          </div>
+    </a>
+
+    <!-- News item 6 -->
+    <a href="news6.html" class="new6s-link">
+        <div class="news-item">
+            <img src="https://images.pexels.com/photos/2610309/pexels-photo-2610309.jpeg?auto=compress&cs=tinysrgb&h=400&w=400 " class="news-image" alt="News 6">
+            <div class="news-content">
+              <div class="news-title">SCX-Mini System Card: Transparency in Model Behavior & Safety</div>
+              <div class="news-meta">Publication · Jan 31, 2025 · 2 min read</div>
+            </div>
+          </div>
+    </a>
+  </div>
+
+
+</body>
+</html>

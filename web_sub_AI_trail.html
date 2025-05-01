@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Sample UI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="page2" class="page">
+    <div class="chat-header">
+      <button onclick="goBack()">←</button>
+      <strong>Chat</strong>
+    </div>
+    <div class="chat-container" id="chat"></div>
+    <div class="input-container">
+      <div class="input-inner">
+        <input type="text" id="userInput" placeholder="Ask something..." />
+        <button onclick="sendMessage()">SEND</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/easing.js"></script>
+</body>
+</html>

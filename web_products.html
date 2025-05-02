@@ -25,6 +25,102 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		</script>
 
+<style>
+        /* 小窗口样式 */
+        .small-window {
+            width: 600px;
+            min-height: 200px;
+            max-height: 80vh;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            display: none; /* 默认隐藏 */
+        }
+
+        .window-header {
+            padding: 12px 20px;
+            background-color: #3ead7c;
+            color: white;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .window-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: white;
+            padding: 0 5px;
+        }
+
+        .window-content {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        /* 遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        /* 主页面按钮样式 */
+        .content-btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .content-btn:hover {
+            background-color: #3367d6;
+        }
+
+        /* 内容样式 */
+        .content-img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .content-list {
+            padding-left: 20px;
+        }
+
+        .content-list li {
+            margin-bottom: 8px;
+        }
+    </style>
 <!--start-smoth-scrolling-->
 </head>
 <body>
@@ -64,40 +160,153 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <!-- script-for-menu -->
 	<!--end-banner-->
 
+    <div id="smallWindow" class="small-window">
+        <div class="window-header">
+            <span class="window-title" id="windowTitle">窗口标题</span>
+            <button class="close-btn" onclick="closeWindow()">×</button>
+        </div>
+        <div class="window-content" id="dynamicContent">
+            <!-- 内容将在这里动态插入 -->
+        </div>
+    </div>
+
+    <!-- 遮罩层 -->
+    <div id="overlay" class="overlay"></div>
+
     <div class="container1">
-    <div class="card">
-      <img src="images/AI_assistant_pro.png" alt="iPhone">
-      <div class="info">
-        <h2>AI Assistant Pro</h2>
-        <p>Advanced voice and text assistant powered by GPT.</p>
-        <a href="web_products/product1.html">View Details</a>
-      </div>
+        <div class="card">
+            <img src="images/img1.png" alt="iPhone">
+            <div class="info">
+              <h2>AI Assistant Pro</h2>
+              <p>Advanced voice and text assistant powered by GPT.</p>
+              <a onclick="showContent('AI Assistant', 'AI Assistant Pro', AIAssistantContent)">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/img1.png" alt="MacBook">
+            <div class="info">
+              <h2>Smart Vision Glasses</h2>
+              <p>AI-enabled glasses with real-time object recognition.</p>
+              <a onclick="showContent('glasses', 'Smart Vision Glasses', glassesContent)">View Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/img1.png" alt="Watch">
+            <div class="info">
+              <h2>Autonomous Drone AI</h2>
+              <p>Next-gen drone with intelligent path planning and tracking.</p>
+              <a onclick="showContent('autonomous', 'Autonomous Drone AI', autonomousContent)">View Details</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/img1.png" alt="iPad">
+            <div class="info">
+              <h2>AI Creative Studio</h2>
+              <p>A powerful tool for generating images, music, and stories.</p>
+              <a onclick="showContent('studio', 'AI Creative Studio', studioContent)">View Details</a>
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <img src="images/Smart_vision_glasses.png" alt="MacBook">
-      <div class="info">
-        <h2>Smart Vision Glasses</h2>
-        <p>AI-enabled glasses with real-time object recognition.</p>
-        <a href="web_products/product2.html">View Details</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/Autonomous_drone_ai.png" alt="Watch">
-      <div class="info">
-        <h2>Autonomous Drone AI</h2>
-        <p>Next-gen drone with intelligent path planning and tracking.</p>
-        <a href="web_products/product3.html">View Details</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/AI_creative_studio.png" alt="iPad">
-      <div class="info">
-        <h2>AI Creative Studio</h2>
-        <p>A powerful tool for generating images, music, and stories.</p>
-        <a href="web_products/product4.html">View Details</a>
-      </div>
-    </div>
-  </div>
+
+    <script>
+        const AIAssistantContent = `
+            <img src="../images/img1.png" alt="AI Assistant Pro">
+            <div class="product-info">
+              <h1>AI Assistant Pro</h1>
+              <p>
+                AI Assistant Pro is your intelligent companion for both voice and text communication. Powered by advanced GPT models,
+                it offers real-time language understanding, scheduling, reminders, and seamless interaction across devices.
+              </p>
+              <p>
+                Whether you're managing your calendar, drafting emails, or asking complex questions, AI Assistant Pro responds with accuracy,
+                personality, and speed.
+              </p>
+              <div class="product-actions">
+                <button href="#">Try Now</button>
+              </div>
+            </div>
+        `;
+
+        const glassesContent = `
+            <img src="../images/img2.png" alt="Smart Vision Glasses">
+            <div class="product-info">
+              <h1>Smart Vision Glasses</h1>
+              <p>
+                Smart Vision Glasses bring artificial intelligence directly to your eyes. With integrated real-time object recognition and smart overlays,
+                these glasses assist with navigation, environment awareness, and accessibility support.
+              </p>
+              <p>
+                Designed for daily wear, they combine style and technology to enhance the way you interact with the world.
+              </p>
+              <div class="product-actions">
+                <a href="#">Try Now</a>
+              </div>
+            </div>
+        `;
+
+        const autonomousContent = `
+            <img src="../images/img3.png" alt="Autonomous Drone AI">
+            <div class="product-info">
+              <h1>Autonomous Drone AI</h1>
+              <p>
+                Equipped with intelligent path planning and real-time obstacle detection, Autonomous Drone AI sets a new standard in aerial technology.
+                Perfect for exploration, delivery, and surveillance, it navigates complex environments with ease.
+              </p>
+              <p>
+                Experience full autonomy, advanced tracking, and AI-optimized flight — no manual control required.
+              </p>
+              <div class="product-actions">
+                <a href="#">Try Now</a>
+              </div>
+            </div>
+        `;
+
+        const studioContent = `
+            <img src="../images/img4.png" alt="AI Creative Studio">
+            <div class="product-info">
+              <h1>AI Creative Studio</h1>
+              <p>
+                AI Creative Studio is your one-stop platform for generating visual art, music, and stories.
+                Leverage the power of multimodal AI to create stunning content with just a few inputs.
+              </p>
+              <p>
+                Whether you're a professional designer or a curious creator, unlock endless creativity with real-time feedback and customization tools.
+              </p>
+              <div class="product-actions">
+                <a href="#">Try Now</a>
+              </div>
+            </div>
+        `;
+
+        function showContent(type, title, content) {
+            document.getElementById('windowTitle').textContent = title;
+
+            document.getElementById('dynamicContent').innerHTML = content;
+
+            document.getElementById('smallWindow').style.display = 'flex';
+            document.getElementById('overlay').style.display = 'block';
+
+            // // 根据内容类型可以做一些特殊处理
+            // switch(type) {
+            //     case 'product':
+            //         // 可以添加产品相关的特殊逻辑
+            //         break;
+            //     case 'service':
+            //         // 服务相关的特殊逻辑
+            //         break;
+            //     // 其他类型...
+            // }
+        }
+
+        function closeWindow() {
+            document.getElementById('smallWindow').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        document.getElementById('overlay').addEventListener('click', closeWindow);
+    </script>
 
 <footer>
   <div class="footer-container">

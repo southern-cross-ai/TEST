@@ -1519,7 +1519,228 @@ footer {
       font-size: 14px;
       color: #666;
     }
-
+/*--carrer-starts--*/
+/*--tab-starts--*/
+ul.tabs-menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 25%;
+  text-align: left;
+}
+ul.tabs-menu li{
+	display: block;
+	float:none;
+}
+ul.tabs-menu li a{
+	font-size: 18px;
+	font-weight:600;
+	text-transform: uppercase;
+	padding: 0.5em 0em;
+	width:100%;
+	text-decoration: none;
+	color: #939393;
+	display:inline-block;
+}
+ul.tabs-menu li a span{
+	background:url(../images/tab.png) no-repeat;
+	width:13px;
+	height:13px;
+	display:inline-block;
+	margin-right:12px;
+}
+ul.tabs-menu li a span:hover,ul.tabs-menu li a.active span{
+	background:url(../images/tab1.png) no-repeat;
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+ul.tabs-menu li a:hover{
+	color:#282828;
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+.tab-grid {
+  padding-left: 2.8em;
+}
+.tab-grid h3 {
+  	font-size: 18px;
+  	margin: 0;
+  	font-weight: 700;
+  	color: #282828;
+  	font-family: 'Open Sans', sans-serif;
+}
+.tab-grid p {
+  	color: #474747;
+  	line-height: 1.8em;
+  	font-size: 16px;
+  	margin-top: 12px;
+  	font-family: 'Open Sans', sans-serif;
+  	width: 90%;
+  	font-weight: 500;
+}
+.tabs-box {
+  	width: 100%;
+  	margin: 3em auto 0;
+  	padding: 0 0 1em;
+  	position: relative;
+}
+.tab-grids {
+  	min-height: 108px;
+  	margin-left: 6em;
+  	width: 75%;
+  	float: right;
+  	border-left: 3px solid #e8e8e8;
+}
+.tb-two{
+	margin-top:14px;
+}
+.tb-one input[type=submit] {
+  	color: #414141;
+  	padding: 9px 24px;
+  	font-size: 16px;
+  	cursor: pointer;
+  	font-weight: 700;
+  	border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px;
+  	-o-border-radius: 5px;
+  	-ms-border-radius: 5px;
+  	border: 2px solid #282828;
+  	background: #fff;
+}
+.tb-one textarea{
+  	width: 100%;
+  	margin: 4px 0;
+  	font-size:13px;
+  	color: #474747;
+  	resize: none;
+  	background: #f3f3f3;
+  	height: 150px;
+  	padding: 15px;
+  	outline: none;
+  	border: none;
+  	border-radius: 2.3em;
+  	-webkit-border-radius: 2.3em;
+  	-moz-border-radius: 2.3em;
+  	-o-border-radius: 2.3em;
+  	-ms-border-radius: 2.3em;
+  	font-family: 'Open Sans', sans-serif;
+}
+.tb-one input[type="text"]{
+  	width: 48.2%;
+  	font-size: 13px;
+  	margin: 7px auto;
+  	color: #474747;
+  	background: #f3f3f3;
+  	padding: 10px 10px;
+  	outline: none;
+  	border: none;
+  	border-radius: 2.3em;
+ 	-webkit-border-radius: 2.3em;
+  	-moz-border-radius: 2.3em;
+  	-o-border-radius: 2.3em;
+  	-ms-border-radius: 2.3em;
+  	font-family: 'Open Sans', sans-serif;
+}
+.tb-one input[type="text"]:nth-child(1),
+.tb-one input[type="text"]:nth-child(3){
+	margin-right:23px;
+}
+/*-- tabs-responsive --*/
+@media(max-width:1366px){
+	ul.tabs-menu {
+		left: 0px;
+	}
+}
+@media(max-width:1280px){
+	ul.tabs-menu {
+  		left: 3em;
+	}
+	.tab-grids {
+		margin-left: 5.5em;
+	}
+}
+@media(max-width:1024px){
+	ul.tabs-menu {
+		left: 0px;
+		width: 12%;
+	}
+	.tab-grids {
+		margin-left: 5.8em;
+	}
+}
+@media(max-width:768px){
+	ul.tabs-menu {
+		left: 0px;
+		width: 12%;
+	}
+	.tab-grids {
+		margin-left: 4em;
+	}
+}
+@media(max-width:640px){
+	ul.tabs-menu {
+		left: 0px;
+		width: 16%;
+	}
+	.tab-grids {
+		margin-left: 4.5em;
+	}
+}
+@media(max-width:480px){
+	ul.tabs-menu {
+		left: 0px;
+		width: 21%;
+	}
+	.tab-grids {
+		margin-left: 4.5em;
+	}
+	.tab-grid h3 {
+		font-size: 0.9em;
+		padding: 0.5em 0 0.5em;
+	}
+	.tab-grid p{
+		font-size:0.875em;
+	}
+}
+@media(max-width:320px){
+	ul.tabs-menu {
+		left: 0px;
+		width: 23%;
+	}
+	.tab-grids {
+		margin-left: 3em;
+	}
+	.tab-grid h3 {
+		font-size: 0.9em;
+		padding: 0.5em 0 0.5em;
+	}
+	.tab-grid p{
+		font-size:0.875em;
+	}
+}
+/*--tab-end--*/
+.carrer-top{
+	text-align:center;
+}
+.carrer{
+	padding:4em 0px;
+}
+.tb-one:nth-child(1){
+	margin-top:0em;
+}
+.tb-one{
+	margin-top:1.8em;
+}
+/*--carrer-ends--*/
 
 /*--media-quaries-starts-here--*/
 @media (max-width: 1000px) {
@@ -1638,7 +1859,7 @@ a {
   margin-top: 2.5em;
 }
 .tab-grid p {
-  width: 78%;
+  width: 90%;
 }
 .tab-grids {
   width: 66%;

@@ -1,4 +1,4 @@
-const OPENROUTER_API_KEY = "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";//test only API
+const OPENROUTER_API_KEY = "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";
 
 async function sendMessage() {
   const input = document.getElementById("userInput");

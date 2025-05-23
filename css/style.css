@@ -245,7 +245,7 @@ ul.navig li:nth-of-type(3) {
 }
 /*------------------ Slider Part starts Here----------*/
 .slider{
-	background:url(../images/slide-banner.jpg)no-repeat;
+	/*background:url(../images/slide-banner.jpg)no-repeat;*/
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -731,7 +731,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 }
 .b-animate img{
 	margin-top:12%;
-	display: -webkit-inline-box;
+	/*display: -webkit-inline-box;*/
 }
 /* lt-ie9 */
 .b-animate-go:hover .b-animate{
